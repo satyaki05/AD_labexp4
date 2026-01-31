@@ -1,6 +1,105 @@
 <!DOCTYPE html>
-<html>
-<body>
-<h2>Welcome! Login Successful</h2>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Portfolio Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="dashboard-body">
+
+<div class="dashboard">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+        <h2 class="logo">MyPortfolio</h2>
+
+        <ul>
+            <li class="active">
+                <a href="#">Dashboard</a>
+            </li>
+
+            <li>
+                <a href="https://github.com/satyaki05" target="_blank">
+                    GitHub
+                </a>
+            </li>
+
+            <li>
+                <a href="login.html" class="logout">
+                    Logout
+                </a>
+            </li>
+        </ul>
+    </aside>
+
+    <!-- MAIN CONTENT -->
+    <main class="content">
+        <div class="content-wrapper">
+
+            <!-- PROFILE CARD -->
+            <div class="profile-card">
+                <div class="avatar"></div>
+
+                <h2>Satyaki De</h2>
+                <p>Full Stack Developer · Java · Spring Boot</p>
+            </div>
+
+            <!-- GITHUB CARD -->
+            <div class="section">
+                <h3>GitHub Profile</h3>
+
+                <div class="github-card">
+                    <p>
+                        Explore my repositories, backend projects, and full-stack work on GitHub.
+                    </p>
+
+                    <a href="https://github.com/satyaki05" target="_blank">
+                        Visit GitHub →
+                    </a>
+                </div>
+            </div>
+
+            <!-- RESUME SECTION -->
+            <div class="section">
+                <h3>Resume</h3>
+
+                <div class="resume-card">
+
+                    <p class="resume-text">
+                        Upload your latest resume <strong>(PDF only)</strong>.
+                        It will be stored securely and can be downloaded anytime.
+                    </p>
+
+                    <!-- UPLOAD FORM -->
+                    <form action="/upload-resume"
+                          method="post"
+                          enctype="multipart/form-data"
+                          class="resume-form">
+
+                        <label class="file-input">
+                            <input type="file"
+                                   name="file"
+                                   accept="application/pdf"
+                                   required>
+                            <span>Choose PDF</span>
+                        </label>
+
+                        <button type="submit" class="btn-primary">
+                            Upload Resume
+                        </button>
+                    </form>
+
+                    <div class="resume-divider"></div>
+
+
+
+                </div>
+            </div>
+
+    </main>
+
+</div>
+
 </body>
 </html>
